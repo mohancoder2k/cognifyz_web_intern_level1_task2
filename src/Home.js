@@ -3,15 +3,13 @@ import { Link } from 'react-router-dom';
 
 
 function Home() {
-  const [buttonColor, setButtonColor] = useState("#000"); // Initial button color
+  const [buttonColor, setButtonColor] = useState("#000"); 
 
-  // Function to change button color
   const changeColor = () => {
     const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
     setButtonColor(randomColor);
   };
 
-  // Show greeting message on page load or refresh
   useEffect(() => {
     const currentTime = new Date();
     const currentHour = currentTime.getHours();
@@ -25,10 +23,10 @@ function Home() {
       greeting = "Good evening!";
     }
 
-    console.log(greeting); // Log the greeting message
+    console.log(greeting); 
 
-    // This hook should not return JSX elements
-  }, []); // Empty dependency array ensures the effect runs only once on component mount
+  
+  }, []); 
 
   return (
     <div>
